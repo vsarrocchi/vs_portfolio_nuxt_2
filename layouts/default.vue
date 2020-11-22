@@ -69,11 +69,6 @@ export default {
           to: '/',
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Om mig',
-          to: '/om-mig',
-        },
-        {
           icon: 'mdi-briefcase',
           title: 'Portfolio',
           to: '/portfolio',

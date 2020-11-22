@@ -1,7 +1,7 @@
 [dev]
    command = "npm run dev"
 [build]
-  command = "nuxt generate"
+  command = "npm run generate"
   publish = "dist"
   functions = 'functions'  # directs netlify to where your functions directory is located
 
