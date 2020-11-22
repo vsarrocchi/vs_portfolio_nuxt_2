@@ -6,6 +6,10 @@ export default {
     NUXT_GOOGLE_MAPS_API_KEY: process.env.NUXT_GOOGLE_MAPS_API_KEY,
   },
 
+  generate: {
+    routes: ['/om-mig', '/portfolio', '/kontakt'],
+  },
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     htmlAttrs: {
