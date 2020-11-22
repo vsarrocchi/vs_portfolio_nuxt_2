@@ -118,8 +118,7 @@
 import { Loader } from '@googlemaps/js-api-loader'
 import { validationMixin } from 'vuelidate'
 import { required, maxLength, email } from 'vuelidate/lib/validators'
-// import mailgun from 'mailgun-js'
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   mixins: [validationMixin],
@@ -341,6 +340,7 @@ export default {
           },
         ],
       })
+      // eslint-disable-next-line no-console
       console.log('map', map)
     })
   },
@@ -355,9 +355,6 @@ export default {
         fromEmail: this.email,
         message: this.message,
       }
-
-      const jsonObj = JSON.stringify(obj)
-
       if (
         obj.firstName !== '' &&
         this.$v.firstName.$error !== true &&
@@ -368,23 +365,10 @@ export default {
         obj.message !== '' &&
         this.$v.message.$error !== true
       ) {
-        console.log('obj', obj)
-        const headers = {
-          headers: {
-            'content-type': 'application/json',
-          },
-        }
-        axios.defaults.headers.post.Accepts = 'application/json'
-        axios
-          .post('/api/contact', jsonObj, headers)
-          .then(function () {})
-          .catch(function (error) {
-            // eslint-disable-next-line no-console
-            console.log('post error', error)
-          })
         // this.success = true
       } else {
         // this.success = false
+        // eslint-disable-next-line no-console
         console.log('error')
       }
       // this.$emit('save', this.success)
@@ -523,9 +507,6 @@ export default {
 }
 
 @media (min-width: 960px) {
-  .col-height {
-    // min-height: 70vh;
-  }
   .contact-form {
     padding-right: 10%;
   }
