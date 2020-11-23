@@ -49,6 +49,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@aceforth/nuxt-optimized-images',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
