@@ -21,7 +21,6 @@
                     label="Förnamn"
                     required
                     solo
-                    disabled
                     @input="$v.firstName.$touch()"
                     @blur="$v.firstName.$touch()"
                   ></v-text-field>
@@ -34,7 +33,6 @@
                     label="Efternamn"
                     required
                     solo
-                    disabled
                     @input="$v.lastName.$touch()"
                     @blur="$v.lastName.$touch()"
                   ></v-text-field>
@@ -47,7 +45,6 @@
                 label="E-post"
                 required
                 solo
-                disabled
                 @input="$v.email.$touch()"
                 @blur="$v.email.$touch()"
               ></v-text-field>
@@ -60,22 +57,15 @@
                 required
                 counter
                 solo
-                disabled
                 @change="$v.message.$touch()"
                 @blur="$v.message.$touch()"
               ></v-textarea>
             </div>
             <div class="form-buttons">
-              <v-btn
-                class="mr-4"
-                color="teal"
-                x-large
-                rounded
-                disabled
-                @click="submit"
+              <v-btn class="mr-4" color="teal" x-large rounded @click="submit"
                 >Skicka</v-btn
               >
-              <v-btn x-large rounded disabled @click="clear">Rensa</v-btn>
+              <v-btn x-large rounded @click="clear">Rensa</v-btn>
               <!-- color="#2EC4B6" -->
               <!-- color="#3CDBD3" -->
               <!-- color="#34E4EA" -->
@@ -118,7 +108,7 @@
 import { Loader } from '@googlemaps/js-api-loader'
 import { validationMixin } from 'vuelidate'
 import { required, maxLength, email } from 'vuelidate/lib/validators'
-// import axios from 'axios'
+import axios from 'axios'
 
 export default {
   mixins: [validationMixin],
@@ -365,6 +355,13 @@ export default {
         obj.message !== '' &&
         this.$v.message.$error !== true
       ) {
+        axios.post('/.netlify/functions/contact-mail', {
+          firstname: obj.firstName,
+          lastname: obj.lastName,
+          email: obj.fromEmail,
+          message: obj.message,
+        })
+        this.clear()
         // this.success = true
       } else {
         // this.success = false
