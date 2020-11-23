@@ -79,14 +79,17 @@
             </div>
             <!-- Submit status -->
             <div class="py-5 px-12 d-flex justify-center">
+              <div v-if="submitStatus === 'PENDING'" class="white--text">
+                Skickar...
+              </div>
               <div v-if="submitStatus === 'OK'" class="white--text">
                 E-post skickat!
               </div>
-              <div v-if="submitStatus === 'ERROR'" class="error-text">
+              <div v-if="submitStatus === 'FORMERROR'" class="error-text">
                 Var god och fyll i formuläret korrekt.
               </div>
-              <div v-if="submitStatus === 'PENDING'" class="white--text">
-                Skickar...
+              <div v-if="submitStatus === 'POSTERROR'" class="error-text">
+                Något gick fel! Försök igen.
               </div>
             </div>
           </v-form>
@@ -368,19 +371,25 @@ export default {
         obj.message !== '' &&
         this.$v.message.$error !== true
       ) {
-        axios.post('/.netlify/functions/contact-mail', {
-          firstname: obj.firstName,
-          lastname: obj.lastName,
-          email: obj.fromEmail,
-          message: obj.message,
-        })
-        this.submitStatus = 'PENDING'
-        setTimeout(() => {
-          this.submitStatus = 'OK'
-        }, 1000)
-        this.clear()
+        axios
+          .post('/.netlify/functions/contact-mail', {
+            firstname: obj.firstName,
+            lastname: obj.lastName,
+            email: obj.fromEmail,
+            message: obj.message,
+          })
+          .then(() => {
+            this.submitStatus = 'PENDING'
+            setTimeout(() => {
+              this.submitStatus = 'OK'
+            }, 1000)
+            this.clear()
+          })
+          .catch(() => {
+            this.submitStatus = 'POSTERROR'
+          })
       } else {
-        this.submitStatus = 'ERROR'
+        this.submitStatus = 'FORMERROR'
       }
     },
     clear() {
