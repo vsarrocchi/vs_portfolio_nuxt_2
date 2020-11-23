@@ -60,7 +60,7 @@
                   <img
                     v-if="item.url && item.name === 'Adobe Illustrator'"
                     class="pa-0 ma-0 adobe-icon"
-                    src="../assets/images/om-oss-logotyper/illustrator.svg"
+                    src="../assets/images/om-oss-logotyper/Illustrator.svg"
                     :alt="item.name"
                   />
                   <img
