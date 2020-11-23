@@ -233,12 +233,12 @@ export default {
       },
       {
         type: 'first',
-        url: '../assets/images/illustrator.svg',
+        url: '../assets/images/Photoshop.svg',
         name: 'Adobe Photoshop',
       },
       {
         type: 'first',
-        url: '../assets/images/illustrator.svg',
+        url: '../assets/images/Illustrator.svg',
         name: 'Adobe Illustrator',
       },
       {

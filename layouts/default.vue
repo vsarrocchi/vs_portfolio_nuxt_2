@@ -71,7 +71,7 @@ export default {
         {
           icon: 'mdi-card-account-details',
           title: 'Om mig',
-          to: '/ommig',
+          to: '/om-mig',
         },
         {
           icon: 'mdi-briefcase',
