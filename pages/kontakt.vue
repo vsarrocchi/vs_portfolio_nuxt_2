@@ -8,7 +8,7 @@
         sm="12"
         class="col-height d-flex flex-column justify-md-space-between pa-sm-0"
       >
-        <h1 class="h1-color">Kontakta mig</h1>
+        <h1 class="h1-color mb-4">Kontakta mig</h1>
         <template>
           <v-form class="contact-form d-flex flex-column justify-space-between">
             <div>
@@ -430,6 +430,7 @@ export default {
 
 .map-container {
   height: 50vh;
+  padding: 2rem 0 0 0 !important;
   #map {
     height: 100%;
     border-radius: 5px;
@@ -442,7 +443,7 @@ export default {
 
 .social-content {
   background-color: #171b21;
-  padding: 6rem 0;
+  padding: 6rem 0 8rem 0;
   div {
     border: 2px solid #d0a77f;
     border-radius: 5px;
@@ -460,7 +461,6 @@ export default {
       display: flex;
       padding: 8px;
       text-decoration: none;
-      // font-size: 1.2rem;
       .v-icon {
         color: #d0a77f;
         margin-right: 7px;
@@ -474,13 +474,6 @@ export default {
   color: #ff5252;
 }
 
-// .social-content div {
-//   width: 100%;
-// }
-// .social-content div a {
-//   font-size: unset;
-// }
-
 @media (min-width: 600px) and (max-width: 767px) {
   .contact-content {
     padding: 56px 5%;
@@ -490,6 +483,7 @@ export default {
     height: 80%;
   }
   .social-content {
+    padding: 1rem 0 8rem 0;
     div {
       width: unset;
     }
@@ -498,7 +492,7 @@ export default {
 
 @media (min-width: 768px) {
   .contact-content {
-    padding: 56px 10%;
+    padding: 56px 10% 0 10%;
   }
   .contact-form {
     // padding: 10px 0 5rem 0;
@@ -506,8 +500,10 @@ export default {
   }
   .map-container {
     height: 510px;
+    padding-top: 5rem !important;
   }
   .social-content {
+    // padding: 1rem 0 8rem 0;
     div {
       width: unset;
       h2 {
@@ -525,11 +521,42 @@ export default {
   .contact-form {
     padding-right: 10%;
   }
+  .social-content {
+    padding: 1rem 0 8rem 0;
+  }
+  .map-container {
+    padding: 0 !important;
+  }
 }
 
 @media (width: 653px) and (height: 280px) {
   .map-container {
     height: 90vh;
+  }
+}
+
+@media (width: 640px) and (height: 360px) {
+  .contact-form {
+    padding: 10px 0 0 0;
+  }
+  .map-container {
+    height: 90vh !important;
+    padding: 0 !important;
+  }
+}
+@media (width: 640px) and (height: 384px) {
+  .contact-form {
+    padding: 10px 0 0 0;
+  }
+  .map-container {
+    height: 90vh !important;
+    padding: 0 !important;
+  }
+}
+
+@media (width: 1024px) and (height: 600px) {
+  .contact-content {
+    padding: 56px 10%;
   }
 }
 
