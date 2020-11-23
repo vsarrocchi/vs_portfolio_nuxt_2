@@ -77,6 +77,18 @@
               <!-- color="#68B0AB" -->
               <!-- color="#00C49A" -->
             </div>
+            <!-- Submit status -->
+            <div class="py-5 px-12 d-flex justify-center">
+              <div v-if="submitStatus === 'OK'" class="white--text">
+                E-post skickat!
+              </div>
+              <div v-if="submitStatus === 'ERROR'" class="error-text">
+                Var god och fyll i formuläret korrekt.
+              </div>
+              <div v-if="submitStatus === 'PENDING'" class="white--text">
+                Skickar...
+              </div>
+            </div>
           </v-form>
         </template>
       </v-col>
@@ -123,6 +135,7 @@ export default {
     lastName: '',
     email: '',
     message: '',
+    submitStatus: null,
     rules: [(v) => v.length <= 700 || 'Max 700 characters'],
   }),
   computed: {
@@ -361,14 +374,14 @@ export default {
           email: obj.fromEmail,
           message: obj.message,
         })
+        this.submitStatus = 'PENDING'
+        setTimeout(() => {
+          this.submitStatus = 'OK'
+        }, 1000)
         this.clear()
-        // this.success = true
       } else {
-        // this.success = false
-        // eslint-disable-next-line no-console
-        console.log('error')
+        this.submitStatus = 'ERROR'
       }
-      // this.$emit('save', this.success)
     },
     clear() {
       this.$v.$reset()
@@ -376,6 +389,7 @@ export default {
       this.lastName = ''
       this.email = ''
       this.message = ''
+      this.submitStatus = null
     },
   },
   head: {
@@ -454,6 +468,10 @@ export default {
       }
     }
   }
+}
+
+.error-text {
+  color: #ff5252;
 }
 
 // .social-content div {
