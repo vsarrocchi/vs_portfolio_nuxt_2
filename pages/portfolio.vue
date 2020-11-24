@@ -398,10 +398,7 @@
           </v-hover>
           <!-- Journal -->
           <v-hover v-slot="{ hover }">
-            <v-card
-              class="mx-auto portfolio-card d-flex"
-              color="grey lighten-4"
-            >
+            <v-card class="mx-auto portfolio-card" color="grey lighten-4">
               <img
                 class="d-flex portfolio-img"
                 :aspect-ratio="16 / 9"

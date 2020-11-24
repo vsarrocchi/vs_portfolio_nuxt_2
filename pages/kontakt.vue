@@ -347,7 +347,7 @@ export default {
         ],
       })
       // eslint-disable-next-line no-console
-      console.log('map', map)
+      console.log(map)
     })
   },
   methods: {
