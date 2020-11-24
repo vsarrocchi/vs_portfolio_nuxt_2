@@ -128,8 +128,8 @@ import axios from 'axios'
 export default {
   mixins: [validationMixin],
   validations: {
-    firstName: { required, maxLength: maxLength(10) },
-    lastName: { required, maxLength: maxLength(10) },
+    firstName: { required, maxLength: maxLength(30) },
+    lastName: { required, maxLength: maxLength(50) },
     email: { required, email },
     message: { required },
   },
@@ -139,36 +139,36 @@ export default {
     email: '',
     message: '',
     submitStatus: null,
-    rules: [(v) => v.length <= 700 || 'Max 700 characters'],
+    rules: [(v) => v.length <= 2000 || 'Max 2000 characters'],
   }),
   computed: {
     firstNameErrors() {
       const errors = []
       if (!this.$v.firstName.$dirty) return errors
       !this.$v.firstName.maxLength &&
-        errors.push('Name must be at most 10 characters long')
-      !this.$v.firstName.required && errors.push('Name is required.')
+        errors.push('Förnamn får max vara 30 bokstäver långt')
+      !this.$v.firstName.required && errors.push('Förnamn är obligatorisk.')
       return errors
     },
     lastNameErrors() {
       const errors = []
       if (!this.$v.lastName.$dirty) return errors
       !this.$v.lastName.maxLength &&
-        errors.push('Name must be at most 10 characters long')
-      !this.$v.lastName.required && errors.push('Name is required.')
+        errors.push('Efternamn får max vara 50 bokstäver långt')
+      !this.$v.lastName.required && errors.push('Efternamn är obligatorisk.')
       return errors
     },
     emailErrors() {
       const errors = []
       if (!this.$v.email.$dirty) return errors
-      !this.$v.email.email && errors.push('Must be valid e-mail')
-      !this.$v.email.required && errors.push('E-mail is required')
+      !this.$v.email.email && errors.push('Ange en giltig emailadress')
+      !this.$v.email.required && errors.push('E-post är obligatorisk.')
       return errors
     },
     messageErrors() {
       const errors = []
       if (!this.$v.message.$dirty) return errors
-      !this.$v.message.required && errors.push('Item is required')
+      !this.$v.message.required && errors.push('Meddelandet är obligatorisk.')
       return errors
     },
   },

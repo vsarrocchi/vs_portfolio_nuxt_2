@@ -28,6 +28,7 @@
                   opacity="0.7"
                   color="#d0a77f"
                 >
+                  <!-- <div class="overlay-content"> -->
                   <div
                     class="d-flex flex-column justify-center align-center pa-1"
                   >
@@ -37,14 +38,16 @@
                     >
                     <p class="text-center">
                       Webbplats byggd tillsammans med två klasskamrater under
-                      vår LIA 2.
+                      vår LIA 2. Jag jobbade framför allt med förmulär
+                      lösningar.
                     </p>
+                  </div>
+                  <div class="overlay-btn-box">
                     <a href="http://convictus.org/">
-                      <v-btn color="#171b21" rounded outlined
-                        >Besök Convictus webbplats
-                      </v-btn>
+                      <v-btn light rounded>Live Site</v-btn>
                     </a>
                   </div>
+                  <!-- </div> -->
                 </v-overlay>
               </v-expand-transition>
             </v-card>
@@ -67,6 +70,7 @@
                   opacity="0.7"
                   color="#d0a77f"
                 >
+                  <!-- <div class="overlay-content"> -->
                   <div
                     class="d-flex flex-column justify-center align-center pa-1"
                   >
@@ -76,12 +80,13 @@
                       Webbplats byggd med digital tillgänglighet och
                       WCAG-riktlinjerna i fokus.
                     </p>
+                  </div>
+                  <div class="overlay-btn-box">
                     <a href="https://wcagnetworks.com/">
-                      <v-btn color="#171b21" rounded outlined
-                        >Besök WCAG Networks webbplats
-                      </v-btn>
+                      <v-btn light rounded>Live Site</v-btn>
                     </a>
                   </div>
+                  <!-- </div> -->
                 </v-overlay>
               </v-expand-transition>
             </v-card>
@@ -102,6 +107,7 @@
                   opacity="0.7"
                   color="#d0a77f"
                 >
+                  <!-- <div class="overlay-content"> -->
                   <div class="d-flex flex-column justify-center align-center">
                     <h2>B3 Squadra</h2>
                     <strong
@@ -111,12 +117,11 @@
                       Webbplats byggd tillsammans med två klasskamrater under
                       vår examensarbete. Webbplatsen blev inte publicerat.
                     </p>
-                    <v-row justify="center">
+                    <!-- <v-row justify="center">
                       <v-btn
                         v-click-outside="onClickOutside"
-                        color="#171b21"
+                        light
                         rounded
-                        outlined
                         @click="
                           overlay = !overlay
                           active = true
@@ -124,30 +129,31 @@
                       >
                         Visa webbplatsens bilder
                       </v-btn>
-                      <v-overlay :z-index="zIndex" :value="overlay">
-                        <v-btn
-                          class="white--text overlay-close-btn ma-3"
-                          color="#d0a77f"
-                          rounded
-                          @click="overlay = false"
-                        >
-                          <v-icon color="#171b21">mdi-close-thick</v-icon>
-                        </v-btn>
-                        <div
-                          class="d-flex justify-center align-center overlay-img"
-                        >
-                          <v-carousel height="auto" class="carousel">
-                            <v-carousel-item
-                              v-for="(bild, i) in carouselImages"
-                              :key="i"
-                              :src="bild.src"
-                              class="carousel-item"
-                            ></v-carousel-item>
-                          </v-carousel>
-                        </div>
-                      </v-overlay>
-                    </v-row>
+                    </v-row> -->
+                    <!-- <v-overlay :z-index="zIndex" :value="overlay">
+                      <v-btn
+                        class="overlay-close-btn ma-3"
+                        light
+                        rounded
+                        @click="overlay = false"
+                      >
+                        <v-icon color="#171b21">mdi-close-thick</v-icon>
+                      </v-btn>
+                      <v-app id="inspire">
+                        <v-carousel height="100%">
+                          <v-carousel-item
+                            v-for="(item, i) in carouselImages"
+                            :key="i"
+                            :src="item.src"
+                            reverse-transition="fade-transition"
+                            transition="fade-transition"
+                            height="100%"
+                          ></v-carousel-item>
+                        </v-carousel>
+                      </v-app>
+                    </v-overlay> -->
                   </div>
+                  <!-- </div> -->
                 </v-overlay>
               </v-expand-transition>
             </v-card>
@@ -168,6 +174,7 @@
                   opacity="0.7"
                   color="#d0a77f"
                 >
+                  <!-- <div class="overlay-content"> -->
                   <div
                     class="d-flex flex-column justify-center align-center pa-1"
                   >
@@ -177,12 +184,16 @@
                       Projekt gjort tillsammans med två klasskamrater under
                       kursen JavaScript 3.
                     </p>
-                    <a href="https://flamboyant-curie-65a21c.netlify.com/">
-                      <v-btn color="#171b21" rounded outlined
-                        >Besök Band Site projektet
-                      </v-btn></a
-                    >
                   </div>
+                  <div class="overlay-btn-box">
+                    <a href="https://github.com/vsarrocchi/band-site">
+                      <v-btn light rounded>GitHub</v-btn>
+                    </a>
+                    <a href="https://flamboyant-curie-65a21c.netlify.com/">
+                      <v-btn light rounded>Live Site</v-btn>
+                    </a>
+                  </div>
+                  <!-- </div> -->
                 </v-overlay>
               </v-expand-transition>
             </v-card>
@@ -203,6 +214,7 @@
                   opacity="0.7"
                   color="#d0a77f"
                 >
+                  <!-- <div class="overlay-content"> -->
                   <div
                     class="d-flex flex-column justify-center align-center pa-1"
                   >
@@ -214,12 +226,16 @@
                       Projekt gjort tillsammans med en klasskamrat under kursen
                       JavaScript 2.
                     </p>
-                    <a href="https://lezcodeher.github.io/project-webshop/">
-                      <v-btn color="#171b21" rounded outlined
-                        >Besök Webbshop projektet
-                      </v-btn></a
-                    >
                   </div>
+                  <div class="overlay-btn-box">
+                    <a href="https://github.com/vsarrocchi/project-webshop-1">
+                      <v-btn light rounded>GitHub</v-btn>
+                    </a>
+                    <a href="https://lezcodeher.github.io/project-webshop/">
+                      <v-btn light rounded>Live Site</v-btn>
+                    </a>
+                  </div>
+                  <!-- </div> -->
                 </v-overlay>
               </v-expand-transition>
             </v-card>
@@ -242,6 +258,7 @@
                   opacity="0.7"
                   color="#d0a77f"
                 >
+                  <!-- <div class="overlay-content"> -->
                   <div
                     class="d-flex flex-column justify-center align-center pa-1"
                   >
@@ -250,14 +267,20 @@
                     <p class="text-center">
                       Projekt gjort under Frontendprojekt kursen.
                     </p>
+                  </div>
+                  <div class="overlay-btn-box">
+                    <a
+                      href="https://github.com/vsarrocchi/FrontendProjekt-Projekt2"
+                    >
+                      <v-btn light rounded>GitHub</v-btn>
+                    </a>
                     <a
                       href="https://vsarrocchi.github.io/FrontendProjekt-Projekt2/"
                     >
-                      <v-btn color="#171b21" rounded outlined
-                        >Besök Live Art Gallery projektet
-                      </v-btn></a
-                    >
+                      <v-btn light rounded>Live Site</v-btn>
+                    </a>
                   </div>
+                  <!-- </div> -->
                 </v-overlay>
               </v-expand-transition>
             </v-card>
@@ -278,6 +301,7 @@
                   opacity="0.7"
                   color="#d0a77f"
                 >
+                  <!-- <div class="overlay-content"> -->
                   <div
                     class="d-flex flex-column justify-center align-center pa-1"
                   >
@@ -287,12 +311,16 @@
                       Projekt gjort tillsammans med tre klasskamrater under
                       kursen Frontend Projekt.
                     </p>
-                    <a href="https://mmdarrah.github.io/SuperHero4rent/">
-                      <v-btn color="#171b21" rounded outlined
-                        >Besök SuperHero for hire projektet
-                      </v-btn></a
-                    >
                   </div>
+                  <div class="overlay-btn-box">
+                    <a href="https://github.com/vsarrocchi/SuperHero4rent">
+                      <v-btn light rounded>GitHub</v-btn>
+                    </a>
+                    <a href="https://mmdarrah.github.io/SuperHero4rent/">
+                      <v-btn light rounded>Live Site</v-btn>
+                    </a>
+                  </div>
+                  <!-- </div> -->
                 </v-overlay>
               </v-expand-transition>
             </v-card>
@@ -315,6 +343,7 @@
                   opacity="0.7"
                   color="#d0a77f"
                 >
+                  <!-- <div class="overlay-content"> -->
                   <div
                     class="d-flex flex-column justify-center align-center pa-1"
                   >
@@ -324,14 +353,20 @@
                       Projekt gjort tillsammans med en klasskamrat under kursen
                       HTML och CSS.
                     </p>
+                  </div>
+                  <div class="overlay-btn-box">
+                    <a
+                      href="https://github.com/vsarrocchi/Projektarbete-HTML-CSS"
+                    >
+                      <v-btn light rounded>GitHub</v-btn>
+                    </a>
                     <a
                       href="https://vsarrocchi.github.io/Projektarbete-HTML-CSS/"
                     >
-                      <v-btn color="#171b21" rounded outlined
-                        >Besök Flexbox/Grid projektet
-                      </v-btn></a
-                    >
+                      <v-btn light rounded>Live Site</v-btn>
+                    </a>
                   </div>
+                  <!-- </div> -->
                 </v-overlay>
               </v-expand-transition>
             </v-card>
@@ -361,19 +396,14 @@
                       Projekt gjort under Grafik Verktig kursen.
                     </p>
                     <v-row justify="center">
-                      <v-btn
-                        color="#171b21"
-                        rounded
-                        outlined
-                        @click="overlay = !overlay"
-                      >
+                      <v-btn light rounded @click="overlay = !overlay">
                         Visa Art Gallery mockup
                       </v-btn>
 
                       <v-overlay :z-index="zIndex" :value="overlay">
                         <v-btn
-                          class="white--text overlay-close-btn ma-3"
-                          color="#d0a77f"
+                          class="overlay-close-btn ma-3"
+                          light
                           rounded
                           @click="overlay = false"
                         >
@@ -419,10 +449,10 @@
                       Projekt gjort under CMS-verktyg, backend och interaktion
                       med databaser kursen.
                     </p>
-                    <a href="">
-                      <v-btn color="#171b21" rounded outlined
-                        >Besök Journal projektet
-                      </v-btn></a
+                  </div>
+                  <div class="overlay-btn-box">
+                    <a href="https://github.com/vsarrocchi/PHP_MySQL_Journal">
+                      <v-btn light rounded>GitHub</v-btn></a
                     >
                   </div>
                 </v-overlay>
@@ -447,17 +477,23 @@
                   opacity="0.7"
                   color="#d0a77f"
                 >
+                  <!-- <div class="overlay-content"> -->
                   <div
                     class="d-flex flex-column justify-center align-center pa-1"
                   >
                     <h2>Min tredje portfölj</h2>
                     <strong>Nuxt/JavaScript/Tailwind</strong>
-                    <a href="https://vsarrocchi.netlify.app/">
-                      <v-btn color="#171b21" rounded outlined
-                        >Besök min tredje portfölj
-                      </v-btn></a
-                    >
+                    <p></p>
                   </div>
+                  <div class="overlay-btn-box">
+                    <a href="https://github.com/vsarrocchi/nuxt-portfolio">
+                      <v-btn light rounded>GitHub</v-btn>
+                    </a>
+                    <a href="https://vsarrocchi.netlify.app/">
+                      <v-btn light rounded>Live Site</v-btn>
+                    </a>
+                  </div>
+                  <!-- </div> -->
                 </v-overlay>
               </v-expand-transition>
             </v-card>
@@ -480,17 +516,23 @@
                   opacity="0.7"
                   color="#d0a77f"
                 >
+                  <!-- <div class="overlay-content"> -->
                   <div
                     class="d-flex flex-column justify-center align-center pa-1"
                   >
                     <h2>Min andra portfölj</h2>
                     <strong>Gatsby/React/Netlify/JavaScript/CSS</strong>
-                    <a href="https://vssportfolio.netlify.app">
-                      <v-btn color="#171b21" rounded outlined
-                        >Besök min andra portfölj
-                      </v-btn></a
-                    >
+                    <p></p>
                   </div>
+                  <div class="overlay-btn-box">
+                    <a href="https://github.com/vsarrocchi/vs_portfolio">
+                      <v-btn light rounded>GitHub</v-btn>
+                    </a>
+                    <a href="https://vssportfolio.netlify.app">
+                      <v-btn light rounded>Live Site</v-btn>
+                    </a>
+                  </div>
+                  <!-- </div> -->
                 </v-overlay>
               </v-expand-transition>
             </v-card>
@@ -513,17 +555,23 @@
                   opacity="0.7"
                   color="#d0a77f"
                 >
+                  <!-- <div class="overlay-content"> -->
                   <div
                     class="d-flex flex-column justify-center align-center pa-1"
                   >
                     <h2>Min första portfölj</h2>
                     <strong>HTML/CSS/JavaScript</strong>
-                    <a href="https://vsarrocchi.github.io/Portfolio/">
-                      <v-btn color="#171b21" rounded outlined
-                        >Besök min första portfölj
-                      </v-btn></a
-                    >
+                    <p></p>
                   </div>
+                  <div class="overlay-btn-box">
+                    <a href="https://github.com/vsarrocchi/Portfolio">
+                      <v-btn light rounded>GitHub</v-btn>
+                    </a>
+                    <a href="https://vsarrocchi.github.io/Portfolio/">
+                      <v-btn light rounded>Live Site</v-btn>
+                    </a>
+                  </div>
+                  <!-- </div> -->
                 </v-overlay>
               </v-expand-transition>
             </v-card>
@@ -600,7 +648,17 @@ export default {
 }
 
 .v-card--reveal {
+  padding: 10px;
+  width: 100% !important;
+  // .overlay-content {
+  //   border: 1px solid red;
+  //   width: 100% !important;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // align-items: center;
   div {
+    width: 100% !important;
     h2 {
       color: #171b21;
       text-align: center;
@@ -617,6 +675,13 @@ export default {
       text-decoration: none;
     }
   }
+  // }
+}
+
+.overlay-btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .overlay-close-btn {
@@ -632,8 +697,7 @@ export default {
 }
 
 .carousel-item {
-  width: 30%;
-  margin: auto;
+  width: 50vw !important;
 }
 
 @media (min-width: 768px) {
