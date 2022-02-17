@@ -123,7 +123,6 @@ export default {
   height: 100vh;
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .heading-1 {

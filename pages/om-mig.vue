@@ -10,12 +10,21 @@
       >
         <h1>Om mig</h1>
         <p class="om-mig-text py-4">
-          Hej! Mitt namn är Valesca och jag är en Frontend utvecklare bosatt i
-          Stockholm. Jag tog examen i maj det här året i Nackademin och efter
-          det jobbade jag deltid i företaget WCAG Networks där jag fick
+          Hej! Mitt namn är Valesca och jag är en junior Frontend utvecklare
+          bosatt i Stockholm. Jag tog examen i maj 2020 i Nackademin och har
+          drygt ett års arbetserfarenhet som Frontend utvecklare. Efter examen
+          jobbade jag 3 månader deltid på företaget WCAG Networks där jag fick
           möjlighet att lära mig om digital tillgänglighet och WCAG
-          riktlinjerna. Just nu söker jag ett jobb där jag kan fortsätta min
-          utveckling som Frontend utvecklare.
+          riktlinjerna. Några månader senare började jag jobba som junior
+          Frontend utvecklare på Cinode, ett företag som jobbar med en Skills
+          Management-plattform. Min roll på Cinode var framför allt att skapa
+          anpassade CV mallar och utveckla nya lösningar i Cinode appen.
+        </p>
+        <p class="om-mig-text py-4">
+          Mitt mål är att hitta en plats där jag kan fortsätta att förbättra
+          mina färdigheter som utvecklare, samtidigt som jag känner mig genuint
+          motiverad att arbeta tillsammans med mina kollegor och med de projekt
+          jag är tilldelad.
         </p>
         <NuxtLink to="/kontakt" class="text-decoration-none mx-auto om-mig-btn">
           <v-btn x-large elevation="6" color="#d0a77f" rounded
