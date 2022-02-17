@@ -11,8 +11,8 @@ export default {
     htmlAttrs: {
       lang: 'sv',
     },
-    titleTemplate: '%s - vs_portfolio_nuxt_2',
-    title: 'vs_portfolio_nuxt_2',
+    // titleTemplate: '%s - vs_portfolio_nuxt_2',
+    // title: 'vs_portfolio_nuxt_2',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -22,8 +22,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
       },
     ],
   },
