@@ -12,13 +12,7 @@
         <p class="om-mig-text py-4">
           Hej! Mitt namn är Valesca och jag är en junior Frontend utvecklare
           bosatt i Stockholm. Jag tog examen i maj 2020 i Nackademin och har
-          drygt ett års arbetserfarenhet som Frontend utvecklare. Efter examen
-          jobbade jag 3 månader deltid på företaget WCAG Networks där jag fick
-          möjlighet att lära mig om digital tillgänglighet och WCAG
-          riktlinjerna. Några månader senare började jag jobba som junior
-          Frontend utvecklare på Cinode, ett företag som jobbar med en Skills
-          Management-plattform. Min roll på Cinode var framför allt att skapa
-          anpassade CV mallar och utveckla nya lösningar i Cinode appen.
+          drygt ett års arbetserfarenhet som Frontend utvecklare.
         </p>
         <p class="om-mig-text py-4">
           Mitt mål är att hitta en plats där jag kan fortsätta att förbättra
@@ -50,59 +44,21 @@
       <v-col class="pa-0">
         <h2 class="om-mig-h2 pb-12">Tekniska Kompetenser</h2>
         <div>
-          <div class="pb-12">
-            <div class="d-flex justify-center flex-wrap">
-              <div v-for="(item, i) in skills" :key="i">
-                <v-sheet
-                  v-if="item.type === 'first'"
-                  class="pa-5 ma-5 text-center skills-box"
-                  color="white"
-                  elevation="5"
-                >
-                  <v-icon v-if="item.icon">{{ item.icon }}</v-icon>
-                  <img
-                    v-if="item.url && item.name === 'Adobe Photoshop'"
-                    class="pa-0 ma-0 adobe-icon"
-                    src="../assets/images/om-oss-logotyper/Photoshop.svg"
-                    :alt="item.name"
-                  />
-                  <img
-                    v-if="item.url && item.name === 'Adobe Illustrator'"
-                    class="pa-0 ma-0 adobe-icon"
-                    src="../assets/images/om-oss-logotyper/Illustrator.svg"
-                    :alt="item.name"
-                  />
-                  <img
-                    v-if="item.url && item.name === 'Adobe XD'"
-                    class="pa-0 ma-0 adobe-icon"
-                    src="../assets/images/om-oss-logotyper/XD.svg"
-                    :alt="item.name"
-                  />
-                  <img
-                    v-if="item.url && item.name === 'Gimp'"
-                    class="gimp-icon"
-                    src="../assets/images/om-oss-logotyper/gimp.svg"
-                    :alt="item.name"
-                  />
-                  <img
-                    v-if="item.url && item.name === 'Figma'"
-                    src="../assets/images/om-oss-logotyper/figma.svg"
-                    :alt="item.name"
-                  />
-                  <img
-                    v-if="item.url && item.name === 'Contentful'"
-                    src="../assets/images/om-oss-logotyper/contentful.svg"
-                    :alt="item.name"
-                  />
-                  <img
-                    v-if="item.url && item.url === 'w3c'"
-                    src="../assets/images/om-oss-logotyper/w3c.svg"
-                    :alt="item.name"
-                  />
-                  <br />
-                  <span>{{ item.name }}</span>
-                </v-sheet>
-              </div>
+          <div class="pb-12 d-flex justify-center flex-wrap">
+            <div v-for="(item, i) in skills" :key="i" class="skills-box">
+              <v-sheet
+                v-if="item.type === 'first'"
+                class="pa-5 ma-5 text-center"
+                color="white"
+                elevation="5"
+              >
+                <img
+                  :src="require(`../assets/images/svg/${item.url}`)"
+                  :alt="item.name"
+                />
+                <br />
+                <span>{{ item.name }}</span>
+              </v-sheet>
             </div>
           </div>
           <strong class="my-5"
@@ -110,43 +66,20 @@
           >
           <div class="pb-12">
             <div class="d-flex justify-center flex-wrap">
-              <div v-for="(item, index) in skills" :key="index">
+              <div
+                v-for="(item, index) in skills"
+                :key="index"
+                class="skills-box"
+              >
                 <v-sheet
                   v-if="item.type === 'second'"
-                  class="pa-5 ma-5 text-center skills-box"
+                  class="pa-5 ma-5 text-center"
                   color="white"
                   elevation="5"
                 >
-                  <v-icon>{{ item.icon }}</v-icon>
                   <img
-                    v-if="item.url && item.name === 'Jasmine'"
-                    src="../assets/images/om-oss-logotyper/jasmine.svg"
-                    :alt="item.name"
-                  />
-                  <img
-                    v-if="item.url && item.name === 'Karma'"
-                    src="../assets/images/om-oss-logotyper/karma.svg"
-                    :alt="item.name"
-                  />
-                  <img
-                    v-if="item.url && item.name === 'Jest'"
-                    src="../assets/images/om-oss-logotyper/jest.svg"
-                    :alt="item.name"
-                  />
-                  <img
-                    v-if="item.url && item.name === 'MySQL'"
-                    src="../assets/images/om-oss-logotyper/mysql.svg"
-                    :alt="item.name"
-                  />
-                  <img
-                    v-if="item.url && item.name === 'Netlify'"
-                    class="my-3"
-                    src="../assets/images/om-oss-logotyper/netlify.svg"
-                    :alt="item.name"
-                  />
-                  <img
-                    v-if="item.url && item.name === 'Jekyll'"
-                    src="../assets/images/om-oss-logotyper/jekyll.svg"
+                    class="pa-0 ma-0"
+                    :src="require(`../assets/images/svg/${item.url}`)"
                     :alt="item.name"
                   />
                   <br />
@@ -167,168 +100,143 @@ export default {
     skills: [
       {
         type: 'first',
-        icon: 'mdi-language-javascript',
+        url: 'javascript.svg',
         name: 'JavaScript',
       },
       {
         type: 'first',
-        icon: 'mdi-language-html5',
+        url: 'html5.svg',
         name: 'HTML5',
       },
       {
         type: 'first',
-        icon: 'mdi-language-css3',
+        url: 'css3.svg',
         name: 'CSS3',
       },
       {
         type: 'first',
-        icon: 'mdi-vuejs',
-        name: 'Vue',
+        url: 'angular.svg',
+        name: 'Angular',
       },
       {
         type: 'first',
-        icon: 'mdi-nuxt',
+        url: 'nuxt.svg',
         name: 'Nuxt',
       },
       {
         type: 'first',
-        url: '../assets/images/contentful.svg',
+        url: 'vue.svg',
+        name: 'Vue',
+      },
+      {
+        type: 'first',
+        url: 'react.svg',
+        name: 'React',
+      },
+      {
+        type: 'first',
+        url: 'contentful.svg',
         name: 'Contentful',
       },
       {
         type: 'first',
-        icon: 'mdi-jquery',
-        name: 'jQuery',
-      },
-      {
-        type: 'first',
-        icon: 'mdi-git',
-        name: 'Git',
-      },
-      {
-        type: 'first',
-        icon: 'mdi-github',
-        name: 'GitHub',
-      },
-      {
-        type: 'first',
-        icon: 'mdi-vuetify',
+        url: 'vuetify.svg',
         name: 'Vuetify',
       },
       {
         type: 'first',
-        icon: 'mdi-sass',
+        url: 'sass.svg',
         name: 'Sass',
       },
       {
         type: 'first',
-        icon: 'mdi-bootstrap',
+        url: 'bootstrap.svg',
         name: 'Bootstrap',
       },
       {
         type: 'first',
-        icon: 'mdi-tailwind',
+        url: 'tailwind.svg',
         name: 'Tailwind',
       },
       {
         type: 'first',
-        url: '../assets/images/gimp.png',
-        name: 'Gimp',
+        url: 'git.svg',
+        name: 'Git',
       },
       {
         type: 'first',
-        url: '../assets/images/figma.svg',
-        name: 'Figma',
+        url: 'github.svg',
+        name: 'GitHub',
       },
       {
         type: 'first',
-        url: '../assets/images/Photoshop.svg',
-        name: 'Adobe Photoshop',
+        url: 'responsive-design.svg',
+        name: 'Responsive design',
       },
       {
         type: 'first',
-        url: '../assets/images/Illustrator.svg',
-        name: 'Adobe Illustrator',
-      },
-      {
-        type: 'first',
-        url: '../assets/images/XD.svg',
-        name: 'Adobe XD',
-      },
-      {
-        type: 'first',
-        icon: 'mdi-responsive',
-        name: 'Responsive Design',
-      },
-      {
-        type: 'first',
-        url: 'w3c',
+        url: 'w3c.svg',
         name: 'Introduction to Web Accessibility',
       },
       {
         type: 'second',
-        icon: 'mdi-react',
-        name: 'Ract',
+        url: 'gimp.svg',
+        name: 'Gimp',
       },
       {
         type: 'second',
-        icon: 'mdi-gatsby',
+        url: 'figma.svg',
+        name: 'Figma',
+      },
+      {
+        type: 'second',
+        url: 'photoshop.svg',
+        name: 'Adobe Photoshop',
+      },
+      {
+        type: 'second',
+        url: 'illustrator.svg',
+        name: 'Adobe Illustrator',
+      },
+      {
+        type: 'second',
+        url: 'xd.svg',
+        name: 'Adobe XD',
+      },
+      {
+        type: 'second',
+        url: 'gatsby.svg',
         name: 'Gatsby',
       },
       {
         type: 'second',
-        icon: 'mdi-angular',
-        name: 'Angular',
-      },
-      {
-        type: 'second',
-        icon: 'mdi-language-typescript',
+        url: 'typescript.svg',
         name: 'TypeScript',
       },
       {
         type: 'second',
-        icon: 'mdi-wordpress',
+        url: 'wordpress.svg',
         name: 'Wordpress',
       },
       {
         type: 'second',
-        icon: 'mdi-language-php',
+        url: 'php.svg',
         name: 'PHP',
       },
       {
         type: 'second',
-        url: 'MySQL',
+        url: 'mysql.svg',
         name: 'MySQL',
       },
       {
         type: 'second',
-        url: 'mdi-language-php',
-        name: 'Jasmine',
-      },
-      {
-        type: 'second',
-        url: 'mdi-language-php',
-        name: 'Karma',
-      },
-      {
-        type: 'second',
-        url: 'mdi-language-php',
-        name: 'Jest',
-      },
-      {
-        type: 'second',
-        icon: 'mdi-firebase',
+        url: 'firebase.svg',
         name: 'Firebase',
       },
       {
         type: 'second',
-        url: 'mdi-',
+        url: 'netlify.svg',
         name: 'Netlify',
-      },
-      {
-        type: 'second',
-        url: 'mdi-',
-        name: 'Jekyll',
       },
     ],
   }),
@@ -358,8 +266,6 @@ export default {
 }
 
 .om-mig-text {
-  // letter-spacing: 0.05em;
-  // line-height: 1.8em;
   font-size: 1.3rem;
 }
 
@@ -369,11 +275,13 @@ export default {
 }
 
 .skills-box {
-  min-height: 156px;
-  .v-icon {
-    font-size: 5rem;
-    color: #d0a77f !important;
-  }
+  display: flex;
+  align-items: flex-end;
+  height: 200px;
+}
+
+.skills-box img {
+  height: 50px;
 }
 
 .adobe-icon {
