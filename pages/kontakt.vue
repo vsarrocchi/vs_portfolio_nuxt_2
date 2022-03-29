@@ -13,24 +13,26 @@
           <v-form class="contact-form d-flex flex-column justify-space-between">
             <div>
               <v-row>
-                <v-col cols="12" md="6" sm="6">
+                <v-col cols="12" md="6" sm="6" class="pb-0">
+                  <label for="firstname">Förnamn</label>
                   <v-text-field
+                    id="firstname"
                     v-model="firstName"
                     :error-messages="firstNameErrors"
                     :counter="10"
-                    label="Förnamn"
                     required
                     solo
                     @input="$v.firstName.$touch()"
                     @blur="$v.firstName.$touch()"
                   ></v-text-field>
                 </v-col>
-                <v-col cols="12" md="6" sm="6">
+                <v-col cols="12" md="6" sm="6" class="pb-0">
+                  <label for="lastname">Efternamn</label>
                   <v-text-field
+                    id="lastname"
                     v-model="lastName"
                     :error-messages="lastNameErrors"
                     :counter="10"
-                    label="Efternamn"
                     required
                     solo
                     @input="$v.lastName.$touch()"
@@ -38,46 +40,48 @@
                   ></v-text-field>
                 </v-col>
               </v-row>
-              <v-text-field
-                v-model="email"
-                class="email-input"
-                :error-messages="emailErrors"
-                label="E-post"
-                required
-                solo
-                @input="$v.email.$touch()"
-                @blur="$v.email.$touch()"
-              ></v-text-field>
-              <v-textarea
-                v-model="message"
-                class="text-area"
-                :error-messages="messageErrors"
-                :rules="rules"
-                label="Meddelande"
-                required
-                counter
-                solo
-                @change="$v.message.$touch()"
-                @blur="$v.message.$touch()"
-              ></v-textarea>
+              <v-row>
+                <v-col class="pb-0 pt-0">
+                  <label for="email">E-post</label>
+                  <v-text-field
+                    id="email"
+                    v-model="email"
+                    :error-messages="emailErrors"
+                    required
+                    solo
+                    @input="$v.email.$touch()"
+                    @blur="$v.email.$touch()"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col class="pt-0">
+                  <label for="message">Meddelande</label>
+                  <v-textarea
+                    id="message"
+                    v-model="message"
+                    :error-messages="messageErrors"
+                    :rules="rules"
+                    required
+                    counter
+                    solo
+                    @change="$v.message.$touch()"
+                    @blur="$v.message.$touch()"
+                  ></v-textarea>
+                </v-col>
+              </v-row>
             </div>
             <div class="form-buttons">
-              <v-btn class="mr-4" color="teal" x-large rounded @click="submit"
+              <v-btn
+                class="mr-4"
+                color="#3CDBD3"
+                x-large
+                rounded
+                @click="submit"
                 >Skicka</v-btn
               >
               <v-btn x-large rounded @click="clear">Rensa</v-btn>
-              <!-- color="#2EC4B6" -->
-              <!-- color="#3CDBD3" -->
-              <!-- color="#34E4EA" -->
-              <!-- color="#72E1D1" -->
-              <!-- color="#4CB5AE" -->
-              <!-- color="#B2DDF7" -->
-              <!-- color="#81D6E3" -->
-              <!-- color="#4CB5AE" -->
-              <!-- color="#68B0AB" -->
-              <!-- color="#00C49A" -->
             </div>
-            <!-- Submit status -->
             <div class="py-5 px-12 d-flex justify-center">
               <div v-if="submitStatus === 'PENDING'" class="white--text">
                 Skickar...
@@ -425,16 +429,12 @@ export default {
   color: #d0a77f;
 }
 
+label {
+  color: white;
+}
+
 .contact-form {
   padding-bottom: 20px;
-}
-
-.email-input {
-  padding: 12px 0 !important;
-}
-
-.text-area {
-  padding-top: 12px !important;
 }
 
 .map-container {
@@ -504,7 +504,6 @@ export default {
     padding: 56px 10% 0 10%;
   }
   .contact-form {
-    // padding: 10px 0 5rem 0;
     height: 450px;
   }
   .map-container {
@@ -512,7 +511,6 @@ export default {
     padding-top: 5rem !important;
   }
   .social-content {
-    // padding: 1rem 0 8rem 0;
     div {
       width: unset;
       h2 {
