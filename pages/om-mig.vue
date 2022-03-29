@@ -40,6 +40,11 @@
         />
       </v-col>
     </v-row>
+    <v-row class="om-mig-content mx-0">
+      <v-col class="pa-0">
+        <TimeLine />
+      </v-col>
+    </v-row>
     <v-row class="om-mig-content text-center mx-0">
       <v-col class="pa-0">
         <h2 class="om-mig-h2 pb-12">Tekniska Kompetenser</h2>

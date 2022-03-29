@@ -8,10 +8,6 @@
           x-large
           @click.stop="rightDrawer = !rightDrawer"
         >
-          <!-- <v-btn
-          :aria-expanded="active ? 'true' : 'false'"
-          @click="active = !active"
-        ></v-btn> -->
           <v-icon>mdi-menu</v-icon>
         </v-btn>
       </v-app-bar>
