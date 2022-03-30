@@ -26,7 +26,6 @@
 }
 
 .social-media-contact i {
-  // padding: 1rem;
   color: #171b21;
 }
 
@@ -59,7 +58,6 @@ a {
   .social-media-box {
     position: relative;
     display: inline-block;
-    // border-radius: 5px;
     transition: all 0.3s ease-in-out;
   }
 
