@@ -79,7 +79,7 @@ export default {
         title: 'LIA 1 - Frontend utvecklare',
         company: 'EMG - Education Media Group',
         description:
-          'Arbetade med att utveckla företagets webbplattform tillsammans med resten av teamet. Teknologier som användes under praktiken inkluderar bland annat: Angular JS, JavaScript, TypeScript och Karma.',
+          'Teknologier som användes under praktiken inkluderar bland annat: Angular JS, JavaScript, TypeScript och Karma.',
       },
       {
         color: '#d0a77f',
