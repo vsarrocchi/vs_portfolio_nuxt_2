@@ -102,11 +102,6 @@ export default {
       },
       {
         type: 'first',
-        url: 'tailwind.svg',
-        name: 'Tailwind',
-      },
-      {
-        type: 'first',
         url: 'git.svg',
         name: 'Git',
       },
@@ -149,6 +144,11 @@ export default {
         type: 'second',
         url: 'xd.svg',
         name: 'Adobe XD',
+      },
+      {
+        type: 'second',
+        url: 'tailwind.svg',
+        name: 'Tailwind',
       },
       {
         type: 'second',
