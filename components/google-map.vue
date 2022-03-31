@@ -5,6 +5,11 @@
 import { Loader } from '@googlemaps/js-api-loader'
 
 export default {
+  data() {
+    return {
+      item: '',
+    }
+  },
   mounted() {
     const loader = new Loader({
       apiKey: process.env.NUXT_GOOGLE_MAPS_API_KEY,
@@ -178,8 +183,7 @@ export default {
           },
         ],
       })
-      // eslint-disable-next-line no-console
-      console.log(map)
+      this.item = map
     })
   },
 }
