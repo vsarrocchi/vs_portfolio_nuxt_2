@@ -65,7 +65,7 @@ export default {
         title: 'Convictus',
         skills: 'Nuxt/Contentful/Vuetify/Vuelidate/Vuex-Store/Axios.',
         description:
-          'LIA 2 project. Jag jobbade framför allt med förmulär lösningar.',
+          'Grupparbete under LIA 2. Jag jobbade framför allt med förmulär lösningar.',
         siteUrl: 'http://convictus.org/',
       },
       {
@@ -80,7 +80,7 @@ export default {
         title: 'B3 Squadra',
         skills: 'Nuxt/Contentful/Vuetify/Vuelidate/Vuex-Store/Axios.',
         description:
-          'Webbplats byggd tillsammans med två klasskamrater under vår examensarbete. Webbplatsen blev inte publicerat.',
+          'Grupparbete under LIA 1 och examensarbete. Webbplatsen blev inte publicerat.',
         url: '',
       },
       {
