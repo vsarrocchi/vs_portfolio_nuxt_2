@@ -48,7 +48,7 @@ export default {
         title: 'Junior Frontend utvecklare',
         company: 'Cinode',
         description:
-          'Arbetade heltid med att utveckla företagets applikation och med att skapa CV templates. Teknologier som användes under den här perioden inkluderar bland annat: Angular, TypeScript, Sass och C#.',
+          'Arbetade heltid med att skapa anpassade CV mallar och med utveckla företagets applikation. Teknologier som användes under den här perioden inkluderar bland annat: Angular, TypeScript, Sass och C#.',
       },
       {
         color: '#d0a77f',
