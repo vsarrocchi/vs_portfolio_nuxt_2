@@ -18,7 +18,9 @@
         </v-sheet>
       </div>
     </div>
-    <strong class="my-5">Jag har också blivit bekant med dessa tekniker</strong>
+    <strong class="my-5"
+      >Jag har även bekantat mig med följande tekniker:</strong
+    >
     <div class="pb-12">
       <div class="d-flex justify-center flex-wrap">
         <div v-for="(item, index) in skills" :key="index" class="skills-box">
@@ -114,6 +116,11 @@ export default {
         type: 'first',
         url: 'w3c.svg',
         name: 'Introduction to Web Accessibility',
+      },
+      {
+        type: 'second',
+        url: 'cypress.svg',
+        name: 'Cypress',
       },
       {
         type: 'second',
