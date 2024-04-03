@@ -44,6 +44,14 @@ export default {
     experiences: [
       {
         color: '#d0a77f',
+        year: 'Maj 2022 - Mars 2024',
+        title: 'Frontend utvecklare',
+        company: 'Black Lizzy',
+        description:
+          'Under min tid som konsult på Black Lizzy hade jag möjligheten att arbeta med Unmo, en plattform för restaurangbranschen som kopplar samman användare och restauranger för anställning. Teknologier som användes under den här perioden inkluderar bland annat: Next.js, TypeScript, Sanity och Sass.',
+      },
+      {
+        color: '#d0a77f',
         year: 'Mars 2021 - Februari 2022',
         title: 'Junior Frontend utvecklare',
         company: 'Cinode',

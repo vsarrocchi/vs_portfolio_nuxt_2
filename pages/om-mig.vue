@@ -10,15 +10,21 @@
       >
         <h1>Om mig</h1>
         <p class="om-mig-text py-4">
-          Hej! Mitt namn är Valesca och jag är en junior Frontend utvecklare
+          <!-- Hej! Mitt namn är Valesca och jag är en junior Frontend utvecklare
           bosatt i Stockholm. Jag tog examen i maj 2020 i Nackademin och har
-          drygt ett års arbetserfarenhet som Frontend utvecklare.
+          drygt ett års arbetserfarenhet som Frontend utvecklare. -->
+          Jag är en praktisk och strukturerad Frontend-utvecklare baserad i
+          Stockholm med över tre års erfarenhet inom branschen.
         </p>
         <p class="om-mig-text py-4">
-          Mitt mål är att hitta en plats där jag kan fortsätta att förbättra
+          <!-- Mitt mål är att hitta en plats där jag kan fortsätta att förbättra
           mina färdigheter som utvecklare, samtidigt som jag känner mig genuint
           motiverad att arbeta tillsammans med mina kollegor och med de projekt
-          jag är tilldelad.
+          jag är tilldelad. -->
+          Mitt mål är att fortsätta utveckla mina färdigheter och bidra till
+          spännande projekt. Jag är en person som trivs med utmaningar och
+          problemlösning, och oavsett uppdrag tar jag det på allvar och utför
+          det med noggrannhet och engagemang.
         </p>
         <NuxtLink to="/kontakt" class="text-decoration-none mx-auto om-mig-btn">
           <v-btn x-large elevation="6" color="#d0a77f" rounded

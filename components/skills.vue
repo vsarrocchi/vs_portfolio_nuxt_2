@@ -62,18 +62,13 @@ export default {
       },
       {
         type: 'first',
-        url: 'angular.svg',
-        name: 'Angular',
+        url: 'typescript.svg',
+        name: 'TypeScript',
       },
       {
         type: 'first',
-        url: 'nuxt.svg',
-        name: 'Nuxt',
-      },
-      {
-        type: 'first',
-        url: 'vue.svg',
-        name: 'Vue',
+        url: 'nextjs.svg',
+        name: 'Next.js',
       },
       {
         type: 'first',
@@ -82,13 +77,13 @@ export default {
       },
       {
         type: 'first',
-        url: 'contentful.svg',
-        name: 'Contentful',
+        url: 'sanity.svg',
+        name: 'Sanity',
       },
       {
         type: 'first',
-        url: 'vuetify.svg',
-        name: 'Vuetify',
+        url: 'contentful.svg',
+        name: 'Contentful',
       },
       {
         type: 'first',
@@ -97,8 +92,8 @@ export default {
       },
       {
         type: 'first',
-        url: 'bootstrap.svg',
-        name: 'Bootstrap',
+        url: 'tailwind.svg',
+        name: 'Tailwind',
       },
       {
         type: 'first',
@@ -119,6 +114,26 @@ export default {
         type: 'first',
         url: 'w3c.svg',
         name: 'Introduction to Web Accessibility',
+      },
+      {
+        type: 'second',
+        url: 'storybook.svg',
+        name: 'Storybook',
+      },
+      {
+        type: 'second',
+        url: 'angular.svg',
+        name: 'Angular',
+      },
+      {
+        type: 'second',
+        url: 'nuxt.svg',
+        name: 'Nuxt',
+      },
+      {
+        type: 'second',
+        url: 'vue.svg',
+        name: 'Vue',
       },
       {
         type: 'second',
@@ -147,18 +162,18 @@ export default {
       },
       {
         type: 'second',
-        url: 'tailwind.svg',
-        name: 'Tailwind',
-      },
-      {
-        type: 'second',
         url: 'gatsby.svg',
         name: 'Gatsby',
       },
       {
         type: 'second',
-        url: 'typescript.svg',
-        name: 'TypeScript',
+        url: 'vuetify.svg',
+        name: 'Vuetify',
+      },
+      {
+        type: 'second',
+        url: 'bootstrap.svg',
+        name: 'Bootstrap',
       },
       {
         type: 'second',
