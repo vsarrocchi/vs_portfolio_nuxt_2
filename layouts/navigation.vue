@@ -53,11 +53,11 @@ export default {
           title: 'Om mig',
           to: '/om-mig',
         },
-        // {
-        //   icon: 'mdi-briefcase',
-        //   title: 'Portfolio',
-        //   to: '/portfolio',
-        // },
+        {
+          icon: 'mdi-briefcase',
+          title: 'Portfolio',
+          to: '/portfolio',
+        },
         {
           icon: 'mdi-email',
           title: 'Kontakt',
